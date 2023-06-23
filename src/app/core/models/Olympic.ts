@@ -1,9 +1,6 @@
-// TODO: create here a typescript interface for an olympic country
-/*
-example of an olympic country:
-{
-    id: 1,
-    country: "Italy",
-    participations: []
+// On définit un modèle d'Olympic pour les données que l'on va récupérer de l'API.
+export class Olympic {
+    id!: number;
+    country!: string;
+    participations!: Array<{id: number, year: number, city: string, medalsCount: number, athleteCount: number}>
 }
-*/

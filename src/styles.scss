@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    font-family: system-ui, sans-serif;
+    font-weight: 200;
+    letter-spacing: 1px;
+    width: fit-content;
+}
+
+body {
+    margin: 0;
+    padding: 0; 
+}

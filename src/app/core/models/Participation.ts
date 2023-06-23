@@ -1,11 +1,8 @@
-// TODO: create here a typescript interface for a participation
-/*
-example of participation:
-{
-    id: 1,
-    year: 2012,
-    city: "Londres",
-    medalsCount: 28,
-    athleteCount: 372
+// On définit un modèle de Participation pour les données que l'on va récupérer de l'API.
+export class Participation {
+    id!: number;
+    year!: number;
+    city!: string;
+    medalsCount!: number;
+    athleteCount!: number;
 }
-*/
