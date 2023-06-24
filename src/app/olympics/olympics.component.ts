@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Olympic } from '../core/models/Olympic';
 import { OlympicsService } from '../core/services/olympics.service';
 
@@ -15,6 +15,7 @@ export class OlympicsComponent {
 
   ngOnInit() {
     this.olympics = this.olympicsService.getAllOlympics();
+    console.log("Inside olympics component : ", this.olympics);
   }
 
 }
