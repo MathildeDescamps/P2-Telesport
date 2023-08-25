@@ -1,3 +1,6 @@
+.details-page {
+    margin: auto;
+}
 h1 {
     color: #FFF;
     background: #03838F;
@@ -14,6 +17,7 @@ h1 {
         display: flex;
         align-items: stretch;
         justify-content: center;
+        margin-bottom: 30px;
     }
     p {
         margin-top: 0;
@@ -25,8 +29,9 @@ h1 {
         border: 2px solid #03838F;
         border-radius: 10px;
         padding: 10px;
-        &:first-child {
-            margin-right: 40px;
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 0;
         }
         span {
             color: #676767;
@@ -38,10 +43,18 @@ h1 {
         }
     }
 }
-.graph-wrapper {
-    margin: auto;
-    .pie-label {
-        font-size: 14px;
-        font-weight: 300;
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #03838F;
+    margin-top: 50px;
+    &:hover {
+        font-weight: 400;
     }
+}
+.graph-wrapper {
+    width: 700px;
+    height: 400px;
 }

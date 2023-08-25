@@ -1,8 +1,9 @@
-// On définit un modèle de Participation pour les données que l'on va récupérer de l'API.
-export class Participation {
-    id!: number;
-    year!: number;
-    city!: string;
-    medalsCount!: number;
-    athleteCount!: number;
+// Here, we can use 'interface' instead of 'class'.
+// An interface essentially defines the properties and type an object can have.
+export interface Participation {
+    id: number;
+    year: number;
+    city: string;
+    medalsCount: number;
+    athleteCount: number;
 }

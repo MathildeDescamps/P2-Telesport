@@ -1,30 +1,38 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-//import { HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
+import { DetailsComponent } from './pages/details/details.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { OlympicsComponent } from './olympics/olympics.component';
-import { OlympicComponent } from './olympic/olympic.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-// We import here every components, modules, and services that we want to use in our app
+// Ici, on importe les composants, modules et services que l'on va utiliser dans notre app..
 @NgModule({
-  // Components
+  // Composants
   declarations: [
     AppComponent,
+    HomeComponent,
+    DetailsComponent,
     NotFoundComponent, 
-    OlympicsComponent, 
-    OlympicComponent
   ],
   // Modules
   imports: [
     BrowserModule, 
     AppRoutingModule, 
-    HttpClientModule
+    HttpClientModule,
+    NgxChartsModule,
+    BrowserAnimationsModule,
+    FontAwesomeModule,
   ],
   // Services
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
 })
 export class AppModule {}

@@ -1,0 +1,36 @@
+<div  class="details-page">
+    <!-- Condition : on affiche cette div SI olympic est défini, SI NON, on affiche le template olympicNotFound. -->
+    <div *ngIf="olympic !== undefined; else olympicNotFound">
+        <div class="intro">
+            <h1>{{ olympic!.country }}</h1>
+            <div>
+                <p>
+                    <span>Number of entries</span>
+                    <span>{{ olympic!.participations.length }}</span>
+                </p>
+                <p>
+                    <span>Total number medals</span>
+                    <span>{{ totalMedals }}</span>
+                </p>
+                <p>
+                    <span>Total number of athletes</span>
+                    <span>{{ totalAthletes }}</span>
+                </p>
+            </div>
+        </div>
+        <div class="graph-wrapper">
+            <ngx-charts-line-chart [results]="data" [legend]="false" [showXAxisLabel]="true" xAxisLabel="Dates" [xAxis]="true" [yAxis]="true" [animations]="false">
+            </ngx-charts-line-chart>
+        </div>
+    </div>
+
+    <!-- Ce template s'affiche uniquement si olympic est undefined. -->
+    <ng-template #olympicNotFound>
+        <div class="center">
+            <h2>Olympic not found</h2>
+        </div>
+    </ng-template>
+
+    <!-- Back to home page link -->
+    <a routerLink="">Back to Home</a>
+</div>

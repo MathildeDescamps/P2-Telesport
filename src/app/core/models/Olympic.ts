@@ -1,6 +1,9 @@
-// On définit un modèle d'Olympic pour les données que l'on va récupérer de l'API.
-export class Olympic {
-    id!: number;
-    country!: string;
-    participations!: Array<{id: number, year: number, city: string, medalsCount: number, athleteCount: number}>
+import { Participation} from './Participation';
+
+// Here, we can use 'interface' instead of 'class'.
+// An interface essentially defines the properties and type an object can have.
+export interface Olympic {
+    id: number;
+    country: string;
+    participations: Participation[];
 }
