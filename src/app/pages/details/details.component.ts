@@ -46,9 +46,9 @@ export class DetailsComponent implements OnInit, OnDestroy {
                 series.push({ "name": "" + participation.year, "value": participation.medalsCount });
             } 
         });
-        //console.log(series);
         return [{ "name": this.olympic!.country, "series": series }];
     }
+
     // On récupère le nombre total de médailles gagnées par le pays choisi.
     get totalMedals(): number {
         var total = 0;
