@@ -12,7 +12,7 @@
     </div>
 </div>
 <div class="graph-wrapper">
-    <ngx-charts-pie-chart [results]="data" [labels]="true" [trimLabels]="false" [animations]="false"
+    <ngx-charts-pie-chart [results]="data" [labels]="true" [trimLabels]="false" [animations]="false"  [autoScale]="true"
         (select)="onSelect($event)">
         <ng-template #tooltipTemplate let-model="model">
             <span style="font-weight: bold; font-size: large;">{{model.name}}</span>

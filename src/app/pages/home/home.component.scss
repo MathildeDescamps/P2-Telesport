@@ -52,12 +52,16 @@ width: fit-content;
 }
 .graph-wrapper {
     margin: auto;
-    transform: scale(0.9);
+    margin-left: -10px;
+    width: 700px;
+    max-width: 100%;
+    height: auto;
     @media screen and (min-width: 576px) {
-        transform: none;
+        margin-left: 0;
     }
     .pie-label {
         font-size: 14px;
         font-weight: 300;
+        word-break: break-word;
     }
 }
