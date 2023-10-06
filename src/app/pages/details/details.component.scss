@@ -14,11 +14,18 @@ h1 {
 .intro {
     margin: auto;
     margin-top: 50px;
+    padding-inline: 20px;
     div {
         display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         align-items: stretch;
         justify-content: center;
         margin-bottom: 30px;
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
     }
     p {
         margin-top: 0;
@@ -30,9 +37,16 @@ h1 {
         border: 2px solid #03838F;
         border-radius: 10px;
         padding: 10px;
-        margin-right: 40px;
+        margin-bottom: 10px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
         &:last-child {
-            margin-right: 0;
+            margin-bottom: 0;
+            @media screen and (min-width: 768px) {
+                margin-right: 0;
+            }
         }
         span {
             color: #676767;
@@ -57,6 +71,7 @@ a {
 }
 .graph-wrapper {
     width: 700px;
+    max-width: 100%;
     height: 400px;
     margin: auto;
 }
